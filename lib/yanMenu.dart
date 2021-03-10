@@ -74,8 +74,8 @@ class _YanMenuState extends State<YanMenu> {
                         ),
                         Container(
                           child: ListTile(
-                            leading: Image.network(
-                              'https://alisverissa.com/wp-content/uploads/2021/03/cropped-dizigiysi.com-logo-280x280.png',
+                            leading: Image.asset(
+                              'assets/logo.png',
                               height: 25,
                               width: 25,
                             ),

@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:alisverissa/servis.dart';
+import 'package:alisverissa/splashscreen.dart';
 import 'package:alisverissa/yanMenu.dart';
 import 'package:ff_navigation_bar/ff_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ void main() {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyPage(),
+      home: SplashScreen(),
     ),
   ));
 }
@@ -32,8 +33,6 @@ class _MyPageState extends State<MyPage> {
 
   int selectedIndex = 0;
   int _progress = 0;
-
-  // WebViewController _webViewController;
 
   @override
   void initState() {
@@ -62,6 +61,7 @@ class _MyPageState extends State<MyPage> {
             javascriptMode: JavascriptMode.unrestricted,
             onProgress: (int progress) {
               _progress = progress;
+
               print("WebView is loading (progress : $progress%)");
             },
             onWebViewCreated: (WebViewController webViewCntrl) {
@@ -126,7 +126,17 @@ class _MyPageState extends State<MyPage> {
                   ),
                   actions: <Widget>[
                     TextButton(
-                      child: Text('Ara'),
+                      onPressed: () => Navigator.pop(context),
+                      child: Text(
+                        "İptal",
+                        style: TextStyle(color: Colors.black54),
+                      ),
+                    ),
+                    TextButton(
+                      child: Text(
+                        'Ara',
+                        style: TextStyle(color: HexColor("0088CC")),
+                      ),
                       onPressed: () {
                         aranacakKelime = searchWordController.text;
 
