@@ -13,14 +13,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 1), () async {
-      bool netControl = await Servis().internetControl();
-      if (netControl == true) {
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => MyPage()));
-      } else {
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => Hata()));
-      }
-    });
+    // Timer(Duration(seconds: 0), () async {
+    //   bool netControl = await Servis().internetControl();
+    //   if (netControl == true) {
+    //     Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => MyPage()));
+    //   } else {
+    //     Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => Hata()));
+    //   }
+    // });
   }
 
   @override
@@ -86,8 +86,8 @@ class Hata extends StatelessWidget {
               ),
               SizedBox(height: 15),
               GestureDetector(
-                onTap: () => Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (_) => SplashScreen())),
+                onTap: () =>
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => MyPage())),
                 child: Container(
                   margin: EdgeInsets.symmetric(horizontal: 10),
                   padding: EdgeInsets.symmetric(vertical: 10),

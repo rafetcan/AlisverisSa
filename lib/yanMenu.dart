@@ -25,8 +25,7 @@ class _YanMenuState extends State<YanMenu> {
               Container(
                 padding: EdgeInsets.all(20.0),
                 color: Colors.blueGrey.shade50,
-                child: Image.network(
-                    'https://alisverissa.com/wp-content/uploads/2021/02/Asset-2-2.png'),
+                child: Image.asset('assets/logo.png'),
               ),
               Expanded(
                 child: ListView(
@@ -75,7 +74,7 @@ class _YanMenuState extends State<YanMenu> {
                         Container(
                           child: ListTile(
                             leading: Image.asset(
-                              'assets/logo.png',
+                              'assets/kadin.png',
                               height: 25,
                               width: 25,
                             ),
