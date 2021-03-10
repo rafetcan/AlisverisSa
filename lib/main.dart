@@ -12,7 +12,7 @@ void main() {
     create: (_) => Servis(),
     child: MaterialApp(
       title: 'AlışverisSa',
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
